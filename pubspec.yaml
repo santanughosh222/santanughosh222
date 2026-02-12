@@ -1,0 +1,108 @@
+name: flutter_base_project
+description: A Flutter base project with authentication
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  dio: ^5.9.0
+  dio_cache_interceptor: ^4.0.3
+  pretty_dio_logger: ^1.3.1
+  shared_preferences: ^2.2.2
+  get: ^4.6.6
+  pinput: ^5.0.2
+  firebase_core: ^4.2.1
+  firebase_auth: ^6.1.2
+  firebase_analytics: ^12.0.4
+  firebase_crashlytics: ^5.0.4
+  firebase_messaging: ^16.0.4
+  flutter_launcher_icons: ^0.14.4
+  lottie: ^3.3.2
+  google_fonts: ^6.1.0
+  easy_localization: ^3.0.3
+  loader_overlay: ^5.0.0
+  flutter_svg: ^2.2.3
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  gap: ^3.0.1
+  flutter_advanced_avatar: ^1.5.2
+  percent_indicator: ^4.2.3
+  image_picker: ^1.2.1
+  file_picker: ^10.3.7
+  cherry_toast: ^1.13.0
+  dotted_border: ^3.1.0
+  flutter_html: ^3.0.0
+  intl: ^0.20.2
+  open_file: ^3.5.10
+  permission_handler: ^12.0.1
+  device_info_plus: ^12.3.0
+ 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  package_rename: ^1.10.0
+  build_runner: ^2.4.11
+  flutter_gen_runner: ^5.6.0
+  
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/app_icon/
+    - assets/loaders/
+    - assets/translations/
+    - assets/translations/en.json
+    - assets/translations/bn.json
+    - assets/icons/
+    - assets/images/
+    - assets/fonts/
+    - assets/images/Splash_screen.png
+
+  
+  fonts:
+    - family: Epilogue
+      fonts:
+        - asset: assets/fonts/Epilogue/Epilogue-Bold.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Italic.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Regular.ttf
+    - family: Urbanist 
+      fonts:
+        - asset: assets/fonts/Urbanist/Urbanist-Bold.ttf
+        - asset: assets/fonts/Urbanist/Urbanist-Italic.ttf
+        - asset: assets/fonts/Urbanist/Urbanist-Regular.ttf
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path_android: "assets/app_icon/prod.png"
+  image_path_ios: "assets/app_icon/prod.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/app_icon/prod.png"
+
+
+# command for generate asset fine:: dart run build_runner build
+flutter_gen:
+  output: lib/core/constants
+  integrations:
+    flutter_svg: true
+    lottie: true
+
+
+# dart run package_rename
+package_rename_config:
+  android:
+    app_name: Home Maintenance # (String) The display name of the android app
+    package_name: com.home.maintenance # (String) The package name of the android app
+    override_old_package: # (Optional) (String) Use this to delete the old folder structure of MainActivity or to use the existing code with the new package name
+    lang: # (Optional) (String) The android development language {kotlin(default) or java}
+
+  ios:
+    app_name: Home Maintenance # (String) The display name of the ios app
+    bundle_name: com.home.maintenance
+    package_name: com.home.maintenance # (String) The product bundle identifier of the ios app
